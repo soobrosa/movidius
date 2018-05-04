@@ -71,5 +71,7 @@ export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 sudo dpkg-reconfigure locales
 make install
+make examples
+export PYTHONPATH=/opt/movidius/caffe/python
 ```
 https://github.com/movidius/ncsdk/blob/master/docs/release_notes.md
