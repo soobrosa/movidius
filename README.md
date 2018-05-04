@@ -60,13 +60,6 @@ vagrant up --provider=VirtualBox
 vagrant ssh
 ```
 
-## Find ubuntu xenial password
-```
-more ~/.vagrant.d/boxes/ubuntu-VAGRANTSLASH-xenial64/20171011.0.0/virtualbox/Vagrantfile
-```
-https://askubuntu.com/questions/832137/ubuntu-xenial64-box-password
-
-
 ## Provision with Movidius script
 ```
 sudo apt-get install make
@@ -74,6 +67,9 @@ mkdir -p ~/workspace
 cd ~/workspace
 git clone https://github.com/movidius/ncsdk.git
 cd ~/workspace/ncsdk
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+sudo dpkg-reconfigure locales
 make install
 ```
 https://github.com/movidius/ncsdk/blob/master/docs/release_notes.md
